@@ -144,7 +144,7 @@ const Header = () => {
 
     return (
         <nav>
-            <div className='w-[90%] flex justify-around items-center mx-auto'>
+            <div className='w-full flex justify-around items-center mx-auto'>
 
                 <div>
                     <img src={logo} alt="logo" className='w-48 h-28' />
