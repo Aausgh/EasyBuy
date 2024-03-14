@@ -23,9 +23,16 @@ const HeroSection = () => {
 
                 </div>
 
-                <div className="border-[15px] border-black p-2 my-6 ">
+                <div className=" p-2 my-6 ">
 
-                    <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW9kZWx8ZW58MHx8MHx8fDA%3D" alt="hero image" className='w-full h-[700px] rounded-full' />
+                    {/* <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW9kZWx8ZW58MHx8MHx8fDA%3D" alt="hero image" className='w-full h-[700px] rounded-full' /> */}
+
+                    <figure className=" ">
+                        <a href="#">
+                            <img className="rounded-lg w-full h-[700px]" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW9kZWx8ZW58MHx8MHx8fDA%3D" alt="image description" />
+                        </a>
+
+                    </figure>
 
                 </div>
 

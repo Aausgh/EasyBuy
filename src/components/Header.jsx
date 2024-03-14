@@ -12,7 +12,6 @@ import {
     MenuList,
     MenuItem,
     MenuGroup,
-    MenuDivider
 } from '@chakra-ui/react'
 import { ChevronDownIcon } from '@chakra-ui/icons'
 
@@ -23,10 +22,16 @@ const Header = () => {
     const components = [
         {
             title: "Men",
-            clothes: [
+            href: "/men",
+            item: [
                 {
                     name: "T-Shirts",
                     href: "/men/clothes/t-shirts"
+                },
+
+                {
+                    name: "Formal Shirts",
+                    href: "/men/clothes/formal-shirts"
                 },
                 {
                     name: "Jackets",
@@ -42,25 +47,13 @@ const Header = () => {
                 },
 
             ],
-            footwear: [
-                {
-                    name: "Casual Shoes",
-                    href: "/men/footwear/casual-shoes"
-                },
-                {
-                    name: "Boots",
-                    href: "/men/footwear/boots"
-                },
-                {
-                    name: "Sports Shoes",
-                    href: "/men/footwear/sport-shoes"
-                },
-            ]
+
         },
 
         {
             title: "Women",
-            clothes: [
+            href: "/women",
+            item: [
                 {
                     name: "T-Shirts",
                     href: "/women/clothes/t-shirts"
@@ -77,47 +70,47 @@ const Header = () => {
                     name: "Jackets",
                     href: "/women/clothes/jackets"
                 },
+                {
+                    name: "Ethnic Wear",
+                    href: "/women/clothes/ethnic-wear"
+                },
 
             ],
-            footwear: [
-                {
-                    name: "Casual Shoes",
-                    href: "/women/footwear/casual-shoes"
-                },
-                {
-                    name: "Boots",
-                    href: "/women/footwear/boots"
-                },
-                {
-                    name: "Sports Shoes",
-                    href: "/women/footwear/sport-shoes"
-                },
-                {
-                    name: "Heels",
-                    href: "/women/footwear/heels"
-                },
 
-            ]
         },
         {
             title: "Kids",
-            clothes: [
+            href: "/kids",
+            item: [
                 {
                     name: "T-Shirts",
                     href: "/kids/clothes/t-shirts"
                 },
                 {
-                    name: "Pants",
+                    name: "Jeans",
                     href: "/kids/clothes/jackets"
                 },
                 {
                     name: "Jackets",
                     href: "/kids/clothes/jackets"
                 },
+                {
+                    name: "Trousers",
+                    href: "/kids/clothes/trousers"
+                },
+                {
+                    name: "Shirts",
+                    href: "/kids/clothes/shirts"
+                },
 
 
             ],
-            footwear: [
+
+        },
+        {
+            title: "Footwear",
+            href: "/footwear",
+            item: [
                 {
                     name: "Casual Shoes",
                     href: "/kids/footwear/casual-shoes"
@@ -130,8 +123,16 @@ const Header = () => {
                     name: "Sports Shoes",
                     href: "/kids/footwear/sport-shoes"
                 },
+                {
+                    name: "Flats",
+                    href: "/kids/footwear/flats"
+                },
+                {
+                    name: "Heels",
+                    href: "/kids/footwear/heels"
+                },
             ]
-        },
+        }
 
     ]
 
@@ -166,23 +167,17 @@ const Header = () => {
                             Shop <ChevronDownIcon />
                         </MenuButton>
 
-                        <MenuList className='flex justify-around items-start gap-20 px-2'>
+                        <MenuList className='flex justify-around items-start gap-10 px-2'>
 
                             {components.map((li) => (
 
-                                <MenuGroup key={li.title} title={li.title} fontSize={20}>
+                                <MenuGroup key={li.title} title={li.title} as={Link} to={li.href} fontSize={20}>
 
                                     <div className='flex flex-col justify-center items-start'>
 
-                                        <MenuGroup title='Clothing' fontSize={16} fontWeight={600}>
-                                            {li.clothes.map((c) => (
+                                        <MenuGroup fontSize={16} fontWeight={600}>
+                                            {li.item.map((c) => (
                                                 <MenuItem as={Link} to={c.href} fontSize={14} key={c.name}>{c.name}</MenuItem>
-                                            ))}
-                                        </MenuGroup>
-
-                                        <MenuGroup title='Footwear' fontSize={16} fontWeight={600} marginTop={10}>
-                                            {li.footwear.map((c) => (
-                                                <MenuItem as={Link} to={c.href} key={c.name}>{c.name}</MenuItem>
                                             ))}
                                         </MenuGroup>
 
