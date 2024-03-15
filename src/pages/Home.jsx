@@ -9,6 +9,7 @@ import CustomerCard from '@/components/CustomerCard';
 import { customer } from '@/assets/constants';
 import InstagramStories from '@/components/sections/InstagramStories';
 import Testimonial from '@/components/sections/Testimonial';
+import Features from '@/components/sections/Features';
 
 const Home = () => {
     const api = import.meta.env.VITE_URL
@@ -66,9 +67,7 @@ const Home = () => {
                         }
                     </div> */}
 
-
                     <Testimonial />
-
 
                 </div>
 
@@ -76,6 +75,8 @@ const Home = () => {
             </div>
 
             <InstagramStories />
+
+            <Features />
 
         </section >
     )
